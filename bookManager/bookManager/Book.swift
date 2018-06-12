@@ -1,0 +1,20 @@
+//
+//  Book.swift
+//  BookManager
+//
+//  Created by Kihyun Choi on 2018. 6. 11..
+//  Copyright © 2018년 sfo. All rights reserved.
+//
+
+struct Book {
+    var name:String
+    var genre:String
+    var author:String
+    
+    func printBook(){
+        print("Name : \(name)")
+        print("Genre : \(genre)")
+        print("Author : \(author)")
+        print("-------------------")
+    }
+}
