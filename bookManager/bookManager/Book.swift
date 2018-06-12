@@ -7,14 +7,17 @@
 //
 
 struct Book {
-    var name:String
-    var genre:String
-    var author:String
     
+    // Add question mark for Nil
+    var name:String?
+    var genre:String?
+    var author:String?
+    
+    // Add exclamation mark for Nil
     func printBook(){
-        print("Name : \(name)")
-        print("Genre : \(genre)")
-        print("Author : \(author)")
+        print("Name : \(name!)")
+        print("Genre : \(genre!)")
+        print("Author : \(author!)")
         print("-------------------")
     }
 }

@@ -20,9 +20,9 @@ class BookManager {
         var tempStr = ""
         
         for item in bookList {
-            tempStr += "Name: \(item.name)\n"
-            tempStr += "Genre: \(item.genre)\n"
-            tempStr += "Author: \(item.author)\n"
+            tempStr += "Name: \(item.name!)\n"
+            tempStr += "Genre: \(item.genre!)\n"
+            tempStr += "Author: \(item.author!)\n"
             tempStr += "------------------\n"
         }
         return tempStr
@@ -36,10 +36,10 @@ class BookManager {
     func searchBook(name:String) -> String?{
         var tempStr = ""
         for item in bookList {
-            if item.name == name {
-                tempStr += "Name: \(item.name)\n"
-                tempStr += "Genre: \(item.genre)\n"
-                tempStr += "Author: \(item.author)\n"
+            if item.name! == name {
+                tempStr += "Name: \(item.name!)\n"
+                tempStr += "Genre: \(item.genre!)\n"
+                tempStr += "Author: \(item.author!)\n"
                 tempStr += "------------------\n"
                 return tempStr
             }
