@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func signUpAction(_ sender: Any) {
-        
+        resultTextView.text = "\(nameField.text!)님 반갑습니다."
     }
     
     override func didReceiveMemoryWarning() {
