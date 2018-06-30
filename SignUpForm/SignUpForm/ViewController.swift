@@ -30,6 +30,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) // Keyboard goes down
+    }
+    
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("moved")
+//    }
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("ended")
+//    }
     
     @IBAction func signUpAction(_ sender: Any) {
         resultTextView.text = "\(nameField.text!)님 반갑습니다."
