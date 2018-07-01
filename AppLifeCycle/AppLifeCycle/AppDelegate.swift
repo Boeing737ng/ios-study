@@ -39,9 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
+    // 앱을 처음 킨 후에, 그리고 홈버튼으로 밖으로 이동했다가 다시 앱으로 접속해도 실행되는 함수
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("applicationDidBecomeActive")
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
