@@ -49,6 +49,9 @@
                                 <state key="normal" title="Select">
                                     <color key="titleColor" white="0.97271050349999999" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showDatePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndG-lg-fPR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwa-iq-J1u">
                                 <rect key="frame" x="236" y="286" width="44" height="30"/>
@@ -60,6 +63,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S61-91-gz9">
                                 <rect key="frame" x="231" y="241" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="showReturnDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="HXX-Bx-BcM"/>
+                                </connections>
                             </switch>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vIy-2a-YA1">
                                 <rect key="frame" x="0.0" y="505" width="375" height="162"/>
@@ -67,6 +73,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="552209952.25453806">
                                     <!--2018-07-02 07:39:12 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="selectDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="cSM-xC-OsS"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltq-Bo-KEr">
                                 <rect key="frame" x="0.0" y="342" width="375" height="47"/>
@@ -101,6 +110,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="vIy-2a-YA1" id="dXS-bF-yg7"/>
+                        <outlet property="departureDateButton" destination="fGG-zD-Sbm" id="ipu-ib-Ahh"/>
+                        <outlet property="returnDateButton" destination="Jwa-iq-J1u" id="6ZO-iC-1mb"/>
+                        <outlet property="returnDateLabel" destination="hLx-ba-jJm" id="U2c-so-UlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
