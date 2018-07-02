@@ -33,13 +33,16 @@ class ViewController: UIViewController {
         //print(sender.description) // change Any -> AnyObject to see
         
         // (sender as! UISwitch): sender를 UISwitch로 형 변환
-        if(sender as! UISwitch).isOn {
-            returnDateLabel.isHidden = false
-            returnDateButton.isHidden = false
-        } else {
-            returnDateLabel.isHidden = true
-            returnDateButton.isHidden = true
-        }
+//        if(sender as! UISwitch).isOn {
+//            returnDateLabel.isHidden = false
+//            returnDateButton.isHidden = false
+//        } else {
+//            returnDateLabel.isHidden = true
+//            returnDateButton.isHidden = true
+//        }
+        
+        returnDateLabel.isHidden = !(sender as! UISwitch).isOn
+        returnDateButton.isHidden = !(sender as! UISwitch).isOn
     }
     @IBAction func selectDate(_ sender: Any) {
     }
