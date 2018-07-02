@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var returnDateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var buttonTag:Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         returnDateLabel.isHidden = true
@@ -22,12 +24,13 @@ class ViewController: UIViewController {
         datePicker.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func showDatePicker(_ sender: Any) {
+    @IBAction func showDatePicker(_ sender: UIButton) {
         if datePicker.isHidden == false{
             datePicker.isHidden = true
         } else {
             datePicker.isHidden = false
         }
+        buttonTag = sender.tag
     }
     @IBAction func showReturnDate(_ sender: Any) {
         //print(sender.description) // change Any -> AnyObject to see
@@ -49,7 +52,11 @@ class ViewController: UIViewController {
         formatter.dateFormat = "YY-MM-dd hh:mma"
         
         let dateString = formatter.string(from: sender.date)
-        departureDateButton.setTitle(dateString, for: UIControlState.normal)
+        if buttonTag == 1 {
+            departureDateButton.setTitle(dateString, for: UIControlState.normal)
+        } else {
+            returnDateButton.setTitle(dateString, for: UIControlState.normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {
