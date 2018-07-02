@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="UIt-hh-jhi">
             <objects>
-                <viewController id="cnS-vY-i36" sceneMemberID="viewController">
+                <viewController id="cnS-vY-i36" customClass="ThirdViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNE-3X-BBb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="cnS-vY-i36" eventType="touchUpInside" id="7fZ-xA-NnV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-pm-NO8">
                                 <rect key="frame" x="87" y="463" width="200" height="60"/>
@@ -37,15 +40,18 @@
                         <viewLayoutGuide key="safeArea" id="yI0-el-CdS"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="TTo-J6-qdU"/>
+                    <connections>
+                        <outlet property="outputLabel" destination="gXc-pm-NO8" id="qq5-ng-JU8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzQ-ab-BY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729" y="952"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="pI8-28-wwb">
             <objects>
-                <viewController id="Rdt-uE-PRI" sceneMemberID="viewController">
+                <viewController id="Rdt-uE-PRI" customClass="SecondViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Usv-Vq-HLT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +61,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="Rdt-uE-PRI" eventType="touchUpInside" id="Eqw-nZ-OJ7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Z-FP-FJM">
                                 <rect key="frame" x="87" y="451" width="200" height="60"/>
@@ -69,15 +78,18 @@
                         <viewLayoutGuide key="safeArea" id="Yei-JW-hpf"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="1tg-WF-mBO"/>
+                    <connections>
+                        <outlet property="outputLabel" destination="A9Z-FP-FJM" id="3GY-Ku-ojG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAz-TO-UGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-63" y="529"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="2xH-oS-VVX">
             <objects>
-                <viewController id="5hB-kM-8qG" sceneMemberID="viewController">
+                <viewController id="5hB-kM-8qG" customClass="FirstViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IhD-9i-WeR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +99,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="5hB-kM-8qG" eventType="touchUpInside" id="ycP-y8-e0S"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doc-on-qIN">
                                 <rect key="frame" x="87" y="452" width="200" height="60"/>
@@ -101,6 +116,9 @@
                         <viewLayoutGuide key="safeArea" id="Cht-F1-hPq"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="iCk-wD-2Qd"/>
+                    <connections>
+                        <outlet property="outputLabel" destination="Doc-on-qIN" id="DTR-Ru-YKZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ge-gJ-GJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,8 +135,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="5hB-kM-8qG" kind="relationship" relationship="viewControllers" id="kKo-YP-GT5"/>
-                        <segue destination="Rdt-uE-PRI" kind="relationship" relationship="viewControllers" id="BV1-IP-7BH"/>
                         <segue destination="cnS-vY-i36" kind="relationship" relationship="viewControllers" id="PRl-bs-fKp"/>
+                        <segue destination="Rdt-uE-PRI" kind="relationship" relationship="viewControllers" id="BV1-IP-7BH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgb-MS-DzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
