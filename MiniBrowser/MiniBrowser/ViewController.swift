@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var bookMarkSegmentedControl: UISegmentedControl!
     @IBOutlet weak var urlTextField: UITextField!
@@ -24,6 +24,17 @@ class ViewController: UIViewController {
         mainWebView.load(myRequest)
         urlTextField.text = initialURL
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        var urlString = "\(urlTextField.text!)"
+        if !urlString.hasPrefix("https://") {
+            urlString = "https://\(urlTextField.text!)"
+        }
+        urlTextField.text = urlString
+        mainWebView.load(URLRequest(url: URL(string: urlString)!))
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func bookMarkAction(_ sender: Any) {
