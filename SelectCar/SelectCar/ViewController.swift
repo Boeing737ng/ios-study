@@ -12,17 +12,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBOutlet weak var imgView: UIImageView!
     
-    let carCompanyName = ["Tesla", "Lamborghini", "Porche"]
+    let carCompanyName = ["Tesla", "Lamborghini", "Porsche"]
     var carModel = [String]()
     var carModelImage = [String]()
     
     let tesla = ["Model S", "Model X"]
     let lamborghini = ["aventador","veneno","huracan"]
-    let porche = ["911","boxter"]
+    let porsche = ["911","boxter"]
     
     let teslaImageNames = ["tesla-model-s.jpg","tesla-model-x.jpg"]
     let lamborghiniImageNames = ["lamborghini-aventador.jpg", "lamborghini-veneno.jpg", "lamborghini-huracan.jpg"]
-    let porcheImageNames = ["porche-911.jpg", "porche-boxter.jpg"]
+    let porscheImageNames = ["porsche-911.jpg", "porsche-boxter.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +62,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             carModel = lamborghini
             carModelImage = lamborghiniImageNames
         } else if component == 0 && row == 2 {
-            carModel = porche
-            carModelImage = porcheImageNames
+            carModel = porsche
+            carModelImage = porscheImageNames
         }
         pickerView.reloadAllComponents()
         imgView.image = UIImage(named: carModelImage[pickerView.selectedRow(inComponent: 1)])
