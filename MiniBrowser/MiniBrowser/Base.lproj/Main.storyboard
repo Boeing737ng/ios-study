@@ -87,6 +87,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-xp-hYR">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,7 +98,7 @@
                     <connections>
                         <outlet property="bookMarkSegmentedControl" destination="iZX-cY-bUn" id="f3u-4W-iXL"/>
                         <outlet property="mainWebView" destination="GZD-TK-msl" id="t7r-LZ-hKe"/>
-                        <outlet property="spinningActivityIndicator" destination="H6s-hT-mZE" id="BTH-CP-dHP"/>
+                        <outlet property="spinner" destination="gXd-xp-hYR" id="7KB-5t-ZCd"/>
                         <outlet property="urlTextField" destination="HBX-IJ-lfJ" id="PBR-QG-hCJ"/>
                     </connections>
                 </viewController>

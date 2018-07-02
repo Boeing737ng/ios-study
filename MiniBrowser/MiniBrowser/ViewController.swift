@@ -9,13 +9,12 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var bookMarkSegmentedControl: UISegmentedControl!
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var mainWebView: WKWebView!
-    @IBOutlet weak var spinningActivityIndicator: UIActivityIndicatorView!
-    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let initialURL = "https://www.facebook.com"
@@ -23,6 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let myRequest = URLRequest(url:myURL!) // need upwrapping
         mainWebView.load(myRequest)
         urlTextField.text = initialURL
+        mainWebView.navigationDelegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -43,6 +43,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let urlString = "https://www.\(bookMarkURL!).com"
         mainWebView.load(URLRequest(url: URL(string: urlString)!))
         urlTextField.text = urlString
+    }
+    
+    // Called when web content begins to load in a web view.
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("start")
+        spinner.startAnimating()
+    }
+    
+    // Called when the navigation is complete.
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("stop")
+        spinner.stopAnimating()
     }
     
     @IBAction func goBackAction(_ sender: Any) {
