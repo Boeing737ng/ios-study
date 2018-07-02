@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let initialURL = "https://www.facebook.com"
+        let myURL = URL(string: initialURL)
+        let myRequest = URLRequest(url:myURL!) // need upwrapping
+        mainWebView.load(myRequest)
+        urlTextField.text = initialURL
         // Do any additional setup after loading the view, typically from a nib.
     }
     
