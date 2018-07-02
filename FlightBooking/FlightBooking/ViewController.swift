@@ -44,7 +44,12 @@ class ViewController: UIViewController {
         returnDateLabel.isHidden = !(sender as! UISwitch).isOn
         returnDateButton.isHidden = !(sender as! UISwitch).isOn
     }
-    @IBAction func selectDate(_ sender: Any) {
+    @IBAction func selectDate(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YY-MM-dd hh:mma"
+        
+        let dateString = formatter.string(from: sender.date)
+        departureDateButton.setTitle(dateString, for: UIControlState.normal)
     }
     
     override func didReceiveMemoryWarning() {
