@@ -46,15 +46,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func goBackAction(_ sender: Any) {
+        mainWebView.goBack()
     }
     
     @IBAction func goForwardAction(_ sender: Any) {
+        mainWebView.goForward()
     }
     
     @IBAction func stopLoadingAction(_ sender: Any) {
+        mainWebView.stopLoading()
     }
     
     @IBAction func reloadAction(_ sender: Any) {
+        mainWebView.reload()
     }
     
     override func didReceiveMemoryWarning() {

@@ -66,7 +66,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="IiK-Jj-Idq"/>
                                     <barButtonItem systemItem="refresh" id="qBA-r5-cVr">
                                         <connections>
-                                            <action selector="refreshAction:" destination="BYZ-38-t0r" id="KbH-kQ-adu"/>
+                                            <action selector="reloadAction:" destination="BYZ-38-t0r" id="JmX-Bn-xV2"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="s1F-Z0-l7a"/>
