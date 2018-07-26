@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     var itemList = [[String:String]]()
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let item1 = ["name":"사과","image":"apple.jpeg","amount":"6","value":"3000원"]
@@ -44,6 +45,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.valueLabel.text = dicTemp["value"]
         cell.imgView.image = UIImage(named: dicTemp["image"]!)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            (segue.destination as! DetailViewController).detailData = itemList[tableView.indexPathForSelectedRow!.row]
+        }
     }
 
     override func didReceiveMemoryWarning() {

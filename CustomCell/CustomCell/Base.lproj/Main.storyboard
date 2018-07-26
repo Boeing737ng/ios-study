@@ -65,7 +65,7 @@
                                             <outlet property="imgView" destination="5tP-GM-4aO" id="mSx-K4-ksC"/>
                                             <outlet property="nameLabel" destination="RLf-CD-UpD" id="Nj2-2q-7yD"/>
                                             <outlet property="valueLabel" destination="pPw-N9-eG4" id="EOE-Hg-8aZ"/>
-                                            <segue destination="xEm-De-W73" kind="show" id="YGI-cP-Xkh"/>
+                                            <segue destination="xEm-De-W73" kind="show" identifier="showDetail" id="YGI-cP-Xkh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,15 +85,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="lG5-fJ-tYN"/>
+                    <connections>
+                        <outlet property="tableView" destination="9oR-Pn-TIy" id="CIL-xw-uOM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860" y="150.67466266866569"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Ci7-G5-pR5">
             <objects>
-                <viewController id="xEm-De-W73" sceneMemberID="viewController">
+                <viewController id="xEm-De-W73" customClass="DetailViewController" customModule="CustomCell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CD2-c1-eWE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +134,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jcH-Kt-XKJ"/>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="yz3-Qk-CVJ" id="wxx-aW-iY3"/>
+                        <outlet property="imgView" destination="x16-7k-k1L" id="cea-6R-mxT"/>
+                        <outlet property="nameLabel" destination="NHD-FL-JwE" id="wLZ-ca-Jcw"/>
+                        <outlet property="valueLabel" destination="YGv-zg-MqA" id="bYU-gZ-pvP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KB-2v-eYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
