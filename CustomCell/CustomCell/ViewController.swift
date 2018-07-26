@@ -35,7 +35,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
+        
+        let dicTemp = itemList[indexPath.row]
+        cell.backgroundColor = UIColor.clear
+        cell.nameLabel.text = dicTemp["name"]
+        cell.amountLabel.text = dicTemp["amount"]
+        cell.valueLabel.text = dicTemp["value"]
+        cell.imgView.image = UIImage(named: dicTemp["image"]!)
         return cell
     }
 
