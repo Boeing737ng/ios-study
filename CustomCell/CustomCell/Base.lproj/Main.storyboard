@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="119" id="LS9-gx-0I4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="119" id="LS9-gx-0I4" customClass="CustomCell" customModule="CustomCell" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LS9-gx-0I4" id="cDo-lE-aHf">
@@ -62,6 +62,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="amountLabel" destination="aNa-iR-QoX" id="F1r-7l-dhY"/>
+                                            <outlet property="imgView" destination="5tP-GM-4aO" id="mSx-K4-ksC"/>
+                                            <outlet property="nameLabel" destination="RLf-CD-UpD" id="Nj2-2q-7yD"/>
+                                            <outlet property="valueLabel" destination="pPw-N9-eG4" id="EOE-Hg-8aZ"/>
                                             <segue destination="xEm-De-W73" kind="show" id="YGI-cP-Xkh"/>
                                         </connections>
                                     </tableViewCell>
